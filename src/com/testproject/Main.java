@@ -16,7 +16,11 @@ public class Main {
 //        castingTest();
 //        mathTest();
 //        numberFormatTest();
-        scannerTest();
+//        scannerTest();
+//        operatorTest();
+//        conditionsTest();
+//        fizzBuzz();
+//        loops();
     }
 
     public static void stringTest() {
@@ -233,5 +237,147 @@ public class Main {
         System.out.print("What is your name? ");
         String name = nameScanner.nextLine().trim();
         System.out.println("Hi " + name + "!");
+    }
+
+    public static void operatorTest() {
+        /**
+         * Comparison operators
+         */
+        int x = 1;
+        int y = 1;
+        System.out.println(x == y);
+
+        /**
+         * Logical operators
+         */
+        boolean boolResult = x > 0 && y > 0; // Works the same way in JavaScript
+        System.out.println(boolResult);
+
+        boolean hasMoney = true;
+        boolean hasJob = true;
+        System.out.println(hasJob || hasMoney);
+    }
+
+    public static void conditionsTest() {
+        /**
+         * Conditions are straightforward
+         * Same with JavaScript but the way Java developers
+         * write conditions are a little different
+         * in terms of format
+         */
+
+        // If else condition
+        int number = 0;
+        if (number == 1) {
+            System.out.println("Nice");
+        }
+        else if (number > 1) {
+            System.out.println("Great");
+        }
+        else {
+            System.out.println("Awesome!");
+        }
+
+        // Simple & concise condition
+        int income = 120_000;
+        boolean hasHighIncome = (income > 100_000);
+        System.out.println(hasHighIncome);
+
+        // Ternary Operator
+        boolean isMarried = false;
+        String status = isMarried ? "Married" : "Single";
+        System.out.println(status);
+
+        // Switch case
+        byte role = 1;
+        switch (role) {
+            case 1:
+                System.out.println("You're admin");
+                break;
+            case 2:
+                System.out.println("You're moderator");
+                break;
+            default:
+                System.out.println("You're a guest!");
+        }
+    }
+
+    public static void fizzBuzz() {
+        /**
+         * Pseudo
+         * if n % 5 == 0 && n % 3 == 0 return fizzbuzz
+         * if n % 5 == 0 return fizz
+         * if n % 3 == 0 return buzz
+         * else return n
+         */
+
+        String word = "";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Give a number: ");
+        int number = scanner.nextInt();
+
+        if (number % 5 == 0) {
+            word += "fizz";
+        }
+        if (number % 3 == 0) {
+            word += "buzz";
+        }
+
+        if (word.equals("")) {
+            System.out.println(number);
+        } else {
+            System.out.println(word);
+        }
+    }
+
+    public static void loops() {
+        /**
+         * For loop
+         */
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Hello World! " + i);
+        }
+
+        /**
+         * While loop
+         * Useful when you don't know how many times you want to repeat something
+         * Good use case, is when you want to keep asking for inputs from a user
+         * until user satisfies a condition.
+         *
+         * It's common to do a forever true condition in while loops
+         * but use "break" and "continue" to handle the stopping
+         */
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+        while (true) {
+            System.out.print("Type something: ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("continue")) {
+                System.out.println("Let's continue!");
+                continue;
+            }
+            if (input.equals("quit")) {
+                break;
+            }
+        }
+
+        /**
+         * Do While loop
+         * A loop that will do something at least once
+         * even if the condition is already false from the beginning.
+         */
+        do {
+            System.out.println("Do");
+        } while (false);
+
+        /**
+         * Foreach loop
+         * To do a foreach loop like in JavaScript,
+         * declare the single value and its type followed by a colon and the array
+         */
+        String[] fruits = { "Apple", "Mango", "Banana" };
+        for (String singleFruit: fruits) {
+            System.out.println(singleFruit);
+        }
     }
 }
