@@ -13,7 +13,7 @@ public class ReverseString {
         char[] wordArray = str.toCharArray(); // [a,w,e,s,o,m,e]
         reversedWord = new char[wordArray.length]; // reversedWord array initialized equal to size of string
         doRecursive(wordArray);
-        return new String (reversedWord);
+        return new String(reversedWord);
     }
 
     public static int doRecursive(char[] wordArray) {
