@@ -22,12 +22,19 @@ public class Rectangle {
         setHeight(height);
     }
 
-    public void setHeight(int value) {
-        if (value > 0) height = value;
+    /**
+     * The use of "this" keyword is to refer to the class
+     * and can be used to access its variables and methods.
+     * It's only needed when your method parameter uses
+     * the same name of your variable.
+     */
+
+    public void setHeight(int height) {
+        if (height > 0) this.height = height;
     }
 
-    public void setWidth(int value) {
-        if (value > 0) width = value;
+    public void setWidth(int width) {
+        if (width > 0) this.width = width;
     }
 
     public int getHeight() {
