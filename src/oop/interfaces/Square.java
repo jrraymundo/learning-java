@@ -11,4 +11,11 @@ public class Square implements Shape {
     public int getSideCount() {
         return 4;
     }
+
+    /**
+     * This is an added method for Square that is not part of the Shape interface
+     */
+    public String getShapeType() {
+        return "2D Shape";
+    }
 }
