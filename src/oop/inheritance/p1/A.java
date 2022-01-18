@@ -19,6 +19,11 @@ public class A {
         this.v1 = v1;
     }
 
+    public void addNumbers(int x, int y) {
+        int result = x + y;
+        System.out.printf("%d + %d is equal to %d", x, y, result);
+    }
+
     protected void printSomething() {
         System.out.println("Printing from A's protected method");
         System.out.println("Private v1 variable is equal to " + v1);

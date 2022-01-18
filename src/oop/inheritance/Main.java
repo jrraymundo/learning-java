@@ -15,5 +15,6 @@ public class Main {
         System.out.println(objB.v5);
         System.out.println(objB.v6);
         objB.doSomething();
+        objB.addNumbers(1, 2);
     }
 }
