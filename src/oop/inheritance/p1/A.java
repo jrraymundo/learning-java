@@ -9,12 +9,19 @@ package oop.inheritance.p1;
  */
 
 public class A {
-    private int v1 = 5;
+    private int v1 = 0;
     protected int v2 = 10;
     public int v3 = 15;
     public int v4 = 20;
 
+    // A's constructor
+    public A(int v1) {
+        this.v1 = v1;
+    }
+
     protected void printSomething() {
         System.out.println("Printing from A's protected method");
+        System.out.println("Private v1 variable is equal to " + v1);
+        System.out.println("Protected v2 variable is equal to " + v2);
     }
 }
