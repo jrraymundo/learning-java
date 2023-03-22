@@ -19,12 +19,12 @@ class GradeSort implements Comparator<Student> {
 	public int compare(Student s1, Student s2) {
 		// If difference of grades is 0 meaning they are equal, 
 		// then compare names alphabetically instead
-		if (s1.grades - s2.grades == 0) {
-			return s1.name.compareTo(s2.name);
+		if (s1.getGrades() - s2.getGrades() == 0) {
+			return s1.getName().compareTo(s2.getName());
 		}
 		
 		// Compare based on grades (numerical order)
-		return s1.grades - s2.grades;
+		return s1.getGrades() - s2.getGrades();
 	}
 }
 
@@ -40,7 +40,7 @@ public class Comparators {
 		Collections.sort(studentList, new GradeSort());
 		
 		for (Student s: studentList) {
-			System.out.println(s.grades + " " + s.name);
+			System.out.println(s.getGrades() + " " + s.getName());
 		}
 	}
 }

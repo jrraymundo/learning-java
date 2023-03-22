@@ -9,14 +9,26 @@ import java.util.*;
  */
 
 class Student implements Comparable<Student> {
-	public int id;
-	public String name;
-	public int grades;
+	private int id;
+	private String name;
+	private int grades;
 	
 	public Student(int id, String name, int grades) {
 		this.id = id;
 		this.name = name;
 		this.grades = grades;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+
+	public int getGrades() {
+		return this.grades;
 	}
 
 	@Override
@@ -47,7 +59,7 @@ public class Comparables {
 		Collections.sort(studentList);
 		
 		for (Student s: studentList) {
-			System.out.println(s.name);
+			System.out.println(s.getName());
 		}
 	}
 }
