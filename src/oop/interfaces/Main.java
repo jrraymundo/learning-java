@@ -32,5 +32,7 @@ public class Main {
             String shapeType = square.getShapeType();
             System.out.println(shapeType);
         }
+        
+        shape.printSomething();
     }
 }
